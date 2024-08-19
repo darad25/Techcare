@@ -1,0 +1,1725 @@
+////////////////////////////
+///// LOGO
+.logo {
+    height: 3.25rem;
+    margin-left: 2rem;
+} 
+
+//////////////////////////
+///  SEARCH  
+.search {
+    // background-color: orangered; use this to get the rught position for the component
+    flex: 0 0 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__input {
+         font-family: inherit; 
+         font-size: inherit;
+         color: inherit;
+         background-color: var(--color-primary);
+         border: none;
+         padding: .7rem 2rem;
+         border-radius: 100px;
+         width: 90%;
+         transition: all .2s;
+         margin-right: -3.5rem;
+
+         &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+         }
+
+         &::-webkit-input-placeholder {
+            font-weight: 100;
+            font-size: 100;
+            color: var(--color-grey-light-4); 
+         } 
+    } 
+
+    &__input:focus + &__button {
+        background-color: var(--color-grey-light-3);
+    }
+
+    &__button  {
+        border: none;
+        background-color: var(--color-grey-light-2);
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        } 
+
+    } 
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--color-grey-dark-3);
+    } 
+} 
+
+
+//////////////////////////
+///  SEARCH  
+.side-nav-search {
+    // background-color: orangered; use this to get the rught position for the component
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__input {
+         font-family: inherit; 
+         font-size: inherit;
+         color: black;
+         background-color: white;
+         border: none;
+         padding: .7rem 2rem;
+         border-radius: 100px;
+         width: 90%;
+         transition: all .2s;
+         margin-right: -1.5rem;
+         
+
+         &:focus {
+            outline: none;
+            width: 100%;
+            background-color: white;
+         }
+
+         &::-webkit-input-placeholder {
+            font-weight: 900;
+            font-size: 2.6rem;
+            color: var(--shadow-dark); 
+         } 
+    } 
+
+    &__input:focus + &__button {
+        background-color: var(--color-grey-light-3);
+    }
+
+    &__button  {
+        border: none;
+        color: black;
+        background-color: white;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        } 
+
+    } 
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: black;
+        background-color: white;
+    } 
+} 
+
+
+.patent-review {
+    color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem; 
+    margin-bottom: 3.5rem;
+    position: relative;
+    overflow: hidden;
+  
+
+    &__text {
+         margin-bottom: 2rem;
+         z-index: 10;
+         position: relative;
+    }
+
+    &__icon-box {
+        position: relative;
+        padding: 40px;
+            text-align: center;
+            color: black;
+            font-size: 24px;
+            
+    } 
+    
+    &__item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        } 
+    }  
+
+    &__item::before {
+        content: ""; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-primary);
+        transform: scaleY(0);
+      //   transform-origin: bottom;   if you want the color primary to come from bottom to top when its hovered on
+        transition: transform .2s,   
+                    width .4s cubic-bezier(1,0,0,1) .2s,
+                    background-color .1s;      
+  }     
+    
+    &__item:hover::before, 
+    &__item--active::before {
+        transform: scaleY(1);     
+        width: 100%;
+    } 
+    
+    &__item:active::before {
+        background-color: var(--color-primary-light);
+    }  
+
+    &__user {
+        position: absolute; 
+        height: 1.25rem;
+        font-size: 1rem;
+        width: 0rem;
+        fill: var(--color-grey-dark-1);
+        top: 1.1rem;
+        right: 60.1rem;
+    }
+
+    &__photo {     
+         height: 2.3rem;
+         width: 2.3rem;
+         border-radius: 50%;
+         margin-right: 10.5rem;
+    }
+
+    &__user-box {
+        margin-right: auto;
+    }
+
+    &__user-name {
+        font-weight: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: .4rem;
+    } 
+
+    &__user-date {
+        font-size: 1rem;
+        color: var(--color-grey-dark-3);
+    }
+
+    &__rating {
+        color: var(--color-primary);
+        font-size: 2.2rem;
+        font-weight: 300;
+    }
+
+    &__notification { 
+        font-size: 1.5rem;
+        font-weight: 700;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        color: --color-grey-dark-1;
+        position: absolute;
+        top: 1.35rem;
+        right: 52.9rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }  
+
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -2rem;
+        left: -1rem;
+        line-height: 1;
+        font-size: 20rem;
+        color: var(--color-grey-light-2);
+        font-family: sans-serif;
+        z-index: 1;
+    } 
+} 
+
+////////////////////////
+/// USER VEFIFICATION
+.user-nav {
+    align-self: stretch;
+
+    display: flex;
+    align-items: center;
+    
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%; 
+        display: flex;
+        align-items: center;
+    } 
+
+    & > *:hover {
+        background-color: var(--color-grey-light-2);
+    }
+
+    &__overview-icon-box {
+        position: relative;
+    } 
+   
+    &__overview-icon {
+        position: absolute;
+         height: 2.25rem;
+         width: 2.25rem;
+         fill: var(--color-grey-dark-1);
+         top: 1rem;
+         right: 70.1rem;
+    }
+
+    &__overview-notification { 
+        font-size: 1.4rem;
+        font-weight: 700;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        color: --color-grey-dark-1;
+        position: absolute;
+        top: 1.35rem;
+        right: 65.4rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }  
+
+    
+    &__patent-icon-box {
+        position: relative;
+
+    } 
+   
+    &__patent-icon {
+        position: absolute;
+         height: 2.25rem;
+         width: 2.25rem;
+         fill: var(--color-grey-dark-1);
+         top: 1rem;
+         right: 25.1rem;
+    }
+
+    &__patent-notification { 
+        font-size: 1.4rem;
+        font-weight: 700;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        color: --color-grey-dark-1;
+        position: absolute;
+        top: 1.35rem;
+        right: 20.7rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    &__user-photo {
+        height: 3.75rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+
+      &__user-name {
+        font-size: 2.8rem;  
+        font-weight: 700;
+        margin-bottom: .01rem;
+        margin-top: 1.2rem;
+        margin-right: 89.4rem;
+    }
+    
+} 
+
+
+
+////////////////////////
+/// USER VEFIFICATION
+.user-nav {
+    align-self: stretch;
+
+    display: flex;
+    align-items: center;
+    
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%; 
+        display: flex;
+        align-items: center;
+    } 
+
+    & > *:hover {
+        background-color: var(--color-grey-light-2);
+    }
+
+    &__schedule-icon-box {
+        position: relative;
+
+    } 
+   
+
+    &__schedule-notification { 
+        font-size: 1.4rem;
+        font-weight: 700;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        color: --color-grey-dark-1;
+        position: absolute;
+        top: 1.35rem;
+        right: 42rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }  
+
+    &__schedule-user {
+        position: absolute; 
+        height: 1.35rem;
+        font-size: 1rem;
+        width: 0rem;
+        fill: var(--color-grey-dark-1);
+        top: 0.8rem;
+        right: 60.1rem;
+    }
+
+    &__schedule-photo {     
+        height: 2.8rem;
+        width: 2.8rem;
+        border-radius: 50%;
+        margin-left: 11rem;
+        top: 97.1rem;
+   } 
+} 
+
+////////////////////////
+/// USER VEFIFICATION
+.user-nav {
+    align-self: stretch;
+
+    display: flex;
+    align-items: center;
+    
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%; 
+        display: flex;
+        align-items: center;
+    } 
+
+    & > *:hover {
+        background-color: var(--color-grey-light-2);
+    }
+
+    &__transaction-icon-box {
+        position: relative;
+
+    } 
+   
+
+    &__transaction-notification { 
+        font-size: 1.4rem;
+        font-weight: 700;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        color: --color-grey-dark-1;
+        position: absolute;
+        top: 1.35rem;
+        right: 17.5rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }  
+
+    &__transaction-user {
+        position: absolute; 
+        height: 1.35rem;
+        font-size: 1rem;
+        width: 0rem;
+        fill: var(--color-grey-dark-1);
+        top: 0.8rem;
+        right: 37.1rem;
+    }
+
+    &__transaction-photo {     
+        height: 2.8rem;
+        width: 2.8rem;
+        border-radius: 50%;
+        margin-left: 11rem;
+        top: 97.1rem;
+   } 
+} 
+
+.user-nav {
+    align-self: stretch;
+
+    display: flex;
+    align-items: center;
+    
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%; 
+        display: flex;
+        align-items: center;
+    } 
+
+    & > *:hover {
+        background-color: var(--color-grey-light-2);
+    }
+
+    &__message-icon-box {
+        position: relative;
+
+    } 
+   
+    &__message-icon {
+        position: absolute;
+         height: 2.25rem;
+         width: 2.25rem;
+         fill: var(--color-grey-dark-1);
+         top: 1rem;
+         right: 35rem;
+    }
+
+    &__message-notification { 
+        font-size: 1.4rem;
+        font-weight: 700;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        color: --color-grey-dark-1;
+        position: absolute;
+        top: 1.35rem;
+         right: 30rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }  
+
+    &__message-user {
+        position: absolute; 
+        height: 1.25rem;
+        font-size: 1rem;
+        width: 0rem;
+        fill: var(--color-grey-dark-1);
+        top: 0.8rem;
+        right: 77.1rem;
+    }
+
+    &__message-photo {     
+        height: 2.8rem;
+        width: 2.8rem;
+        border-radius: 50%;
+        margin-left: 11rem;
+        top: 97.1rem;
+   } 
+} 
+
+.user-nav {
+    align-self: stretch;
+
+    display: flex;
+    align-items: center;
+    
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%; 
+        display: flex;
+        align-items: center;
+    } 
+
+    & > *:hover {
+        background-color: var(--color-grey-light-2);
+    }
+
+    &__settings-icon-box {
+        position: relative;
+
+    } 
+   
+    &__settings-icon {
+        position: absolute;
+         height: 2.25rem;
+         width: 2.25rem;
+         fill: var(--color-grey-dark-1);
+         top: 1rem;
+         right: 35rem;
+    }
+
+    &__settings-notification { 
+        font-size: 1.4rem;
+        font-weight: 700;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        color: --color-grey-dark-1;
+        position: absolute;
+        top: 1.35rem;
+         right: 30rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }  
+
+    &__settings-user {
+        position: absolute; 
+        height: 1.25rem;
+        font-size: 1rem;
+        width: 0rem;
+        fill: var(--color-grey-dark-1);
+        top: 0.4rem;
+        right: 15.1rem;
+    }
+
+    &__settings-photo {     
+        height: 2.2rem;
+        width: 2.2rem;
+        border-radius: 50%;
+        margin-left: 10.5rem;
+        top: 97.1rem;
+   } 
+}     
+
+.user-nav {
+    align-self: stretch;
+
+    display: flex;
+    align-items: center;
+    
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%; 
+        display: flex;
+        align-items: center;
+    } 
+
+    & > *:hover {
+        background-color: var(--color-grey-light-2);
+    }
+
+    &__threelines-icon-box {
+        position: relative;
+
+    } 
+   
+    &__threelines-icon {
+        position: absolute;
+         height: 2.25rem;
+         width: 2.25rem;
+         fill: var(--color-grey-dark-1);
+         top: 1rem;
+         right: 35rem;
+    }
+
+    &__threelines-notification { 
+        font-size: 1.4rem;
+        font-weight: 700;
+        height: 1.75rem;
+        width: 1.25rem;
+        border-radius: 50%;
+        color: --color-grey-dark-1;
+        position: absolute;
+        top: 1.35rem;
+         right: 30rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }  
+
+    &__threelines-user {
+        position: absolute; 
+        height: 1.25rem;
+        font-size: 1rem;
+        width: 0rem;
+        fill: var(--color-grey-dark-1);
+        top: 0.4rem;
+        right: 17.5rem;
+    } 
+
+    &__threelines-photo {     
+        height: 2.2rem;
+        width: 2.2rem;
+        border-radius: 50%;
+        margin-left: 15rem;
+        top: 97.1rem;
+   } 
+}  
+
+.side-dots {
+    align-self: stretch;
+
+    display: flex;
+    align-items: center;
+    
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%; 
+        display: flex;
+        align-items: center;
+    } 
+
+    & > *:hover {
+        background-color: var(--color-grey-light-2);
+    }
+
+    &__settings-icon-box {
+        position: relative;
+
+    } 
+   
+    &__settings-icon {
+        position: absolute;
+         height: 2.25rem;
+         width: 2.25rem;
+         fill: var(--color-grey-dark-1);
+         top: 1rem;
+         right: 35rem;
+    }
+
+    &__settings-notification { 
+        font-size: 1.4rem;
+        font-weight: 700;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        color: --color-grey-dark-1;
+        position: absolute;
+        top: 1.35rem;
+         right: 30rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }  
+
+    &__settings-user {
+        position: absolute; 
+        height: 1.25rem;
+        font-size: 1rem;
+        width: 0rem;
+        fill: var(--color-grey-dark-1);
+        bottom: .5rem;
+        right: 2.7rem;
+    }
+
+    &__settings-photo {     
+        height: 2.2rem;
+        width: 3.2rem;
+        border-radius: 50%;
+        margin-left: 10.5rem;
+        top: 97.1rem;
+   } 
+}     
+
+.eview {
+
+    &__doctor-text {
+         margin-bottom: 2rem;
+         z-index: 10;
+         position: relative;
+    }
+
+    &__doctor-user {
+          display: flex;
+          align-items: center;
+          left: 40rem;
+          
+    }
+
+    &__doctor-photo {     
+         height: 4.5rem;
+         width: 4.5rem;
+         border-radius: 50%;
+         margin-right: 0rem;
+         margin-left: 1rem;
+    } 
+
+    &__doctor-user-box {
+        margin-left: auto;
+    }
+
+    &__doctor-user-name {
+        font-weight: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: .03rem;
+        right: 13rem;
+    } 
+
+    &__doctor-user-date {
+        font-size: 1rem;
+        color: var(--color-grey-dark-3);
+        margin-bottom: 0.1rem;
+    }
+
+    &__rating {
+        color: var(--color-primary);
+        font-size: 2.2rem;
+        font-weight: 300;
+    }
+
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -2rem;
+        left: -1rem;
+        line-height: 1;
+        font-size: 20rem;
+        color: var(--color-grey-light-2);
+        font-family: sans-serif;
+        z-index: 1;
+    } 
+} 
+
+//////////////
+/// SIDE NAVIGATION  
+.side-nav {
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: .001rem;
+    padding-top: 2.1rem;
+    padding-bottom: 27.5rem;
+    background-color: white;
+    width: 300px;
+    margin-left: 20px;
+    border-radius: 18px;
+    min-height: 92vh;
+
+
+
+    &__item {
+        position: relative;
+        margin-top: 1.5rem;
+
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        } 
+    }  
+
+    &__item::before {
+          content: ""; 
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 3px;
+          background-color: var(--color-primary);
+          transform: scaleY(0);
+        //   transform-origin: bottom;   if you want the color primary to come from bottom to top when its hovered on
+          transition: transform .2s,   
+                      width .4s cubic-bezier(1,0,0,1) .2s,
+                      background-color .1s;      
+    }     
+ 
+    &__item:hover::before, 
+    &__item--active::before {
+        transform: scaleY(1);     
+        width: 100%;
+    } 
+
+    &__item:active::before {
+        background-color: var(--color-primary-light);
+    }  
+
+    &__link:link,
+    &__link:visited {
+          color: var(--color-grey-light-1);
+          text-decoration: none;
+          text-transform: uppercase;
+          display: block;
+          padding: 1.5rem 3rem;
+
+          // this two is what made it possible for the text like HOTEL, to show on top the pink hover effect
+          position: relative;
+          z-index: 10;
+
+          display: flex;
+          align-items: center;  
+    } 
+    
+    // &__link:hover {
+    //     color: orangered;
+    // } 
+    
+    &__icon {
+        //  color: green;  if you want change the color of the linl and icons 
+         width: 1.75rem;
+         height: 1.75rem;
+         margin-right: 2rem;
+         fill: currentColor;
+    }   
+}
+
+/// SIDE NAVIGATION  
+.side-na {
+    position: relative;
+    bottom: 98.5rem;
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: .001rem;
+    padding-top: 22.1rem;
+    padding-bottom: 27.5rem;
+    background-color: white;
+    width: 300px;
+    margin-left: 940px;
+    border-radius: 18px;
+    min-height: 92vh;
+
+
+
+    &__item {
+        position: relative;
+        margin-top: 1rem;
+        bottom: 18rem;
+
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        } 
+    }  
+
+    // &__item::before {
+    //       content: ""; 
+    //       position: absolute;
+    //       top: 0;
+    //       left: 0;
+    //       height: 100%;
+    //       width: 3px;
+    //       background-color: var(--color-primary);
+    //       transform: scaleY(0);
+    //     //   transform-origin: bottom;   if you want the color primary to come from bottom to top when its hovered on
+    //       transition: transform .2s,   
+    //                   width .4s cubic-bezier(1,0,0,1) .2s,
+    //                   background-color .1s;      
+    // }     
+ 
+    &__item:hover::before, 
+    &__item--active::before {
+        transform: scaleY(1);     
+        width: 100%;
+    } 
+
+    &__item:active::before {
+        background-color: var(--color-primary-light);
+    }  
+
+    &__link:link,
+    &__link:visited {
+          color: var(--color-grey-light-1);
+          text-decoration: none;
+          text-transform: uppercase;
+          display: block;
+          padding: 1.5rem 3rem;
+
+          // this two is what made it possible for the text like HOTEL, to show on top the pink hover effect
+          position: relative;
+          z-index: 10;
+
+          display: flex;
+          align-items: center;  
+    } 
+    
+    // &__link:hover {
+    //     color: orangered;
+    // } 
+    
+    &__icon {
+        //  color: green;  if you want change the color of the linl and icons 
+         width: 1.75rem;
+         height: 1.75rem;
+         margin-right: 2rem;
+         fill: currentColor;
+    }   
+}
+
+//////////////////////
+/// LEGAL TEXT 
+.legal {
+    font-size: 1.2rem;
+    color: var(--color-grey-light-4);
+    text-align: center;
+    padding: 2.5rem;
+}  
+
+
+//////////////////////
+/// GALLERY 
+.gallery {
+    // this is what makes it spread out horizontally 
+    display: flex;
+    
+    font-size: 1.4rem;
+    display: flex;
+    padding-right: 4.5rem;
+    padding-left: 4.5rem;
+    background-color: var(--color-grey-light-2);
+    border-bottom: var(--line);
+    border-radius: 10px;    //here
+
+
+
+    &__photo {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+//////////////////////
+/// HOTEL OVERVIEW
+.overview { 
+    display: flex;
+    align-items: center;
+    border-bottom: var(--line);
+
+
+    &__heading {
+        font-size: 2.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 1.5rem 3rem;
+    } 
+
+    &__stars {
+        // use of margin on auto for some times with orangered background effect to show what it does, you might need that kind of design sometimes
+       margin-right: auto;
+       display: flex;
+    //    background-color: oramgered;
+    }
+
+    &__icon-star,
+    &__icon-location { 
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: var(--color-primary);
+
+    }
+  
+    &__location {
+        //    flex: 1;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    &__icon-location {
+        margin-right: .5rem; 
+    }
+
+    &__rating {
+            background-color: var(--color-primary);
+            color: #fff;
+            margin-left: 3rem;
+            padding: 0 2.25rem;
+            align-self: stretch;
+            
+            display: flex;
+            flex-direction: column;  
+            align-items: center;
+            justify-content: center;
+    }  
+
+    &__rating-average {
+       font-size: 2.25rem;
+       font-weight: 300;   
+       margin-bottom: -3px; 
+    } 
+
+    &__rating-count {
+        font-size: .8rem;
+        text-transform: uppercase;
+    } 
+}    
+
+//////////////////////
+/// BUTTON INLINE 
+.btn-inline {
+    border: none;
+    color: var(--color-primary);
+    font-size: inherit;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .2s;
+
+    & span {
+        margin-left: 3px;
+        transition: margin-left .2s;
+    }  
+
+    &:hover {
+        color: var(--color-grey-dark-1);
+
+        span {
+            margin-left: 8px;
+        } 
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+}  
+
+@keyframes pulsate {
+    0% {
+         transform: scale(1);
+         box-shadow: none;
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
+    }
+
+    100% {
+         transform: scale(1);
+         box-shadow: none;
+    }
+} 
+
+//////////////////////
+/// PARAGRAPH you can also try out :last-child for the next line to see how it transform
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+} 
+
+
+
+//////////////////////
+/// LIST
+.list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        flex: 0 0 50%;
+        margin-bottom: .7rem;
+    }
+
+    &__item::before {
+        content: "";
+        display: inline-block;
+        height: 2rem;
+        width: 2rem;
+        margin-right: .7rem;
+
+        // Older browsers 
+        //background-image: url(../img/chevron-thin-right.svg);
+        //background-size: cover;
+
+        //Newer browsers - masks 
+        background-color: var(--color-primary);
+        -webkit-mask-image: url(../img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+        mask-image: url(../img/chevron-thin-right.svg);
+        mask-size: cover;
+    }
+} 
+
+
+//////////////////////
+/// RECOMMEND
+.recommend {
+    font-size: 1.3rem;
+    color: var(--color-grey-dark-3);
+    
+    display: flex;
+    align-items: center;
+
+    &__count { 
+          margin-right: auto;
+    }
+         
+    &__photo {
+        box-sizing: content-box;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 3px solid #fff;
+
+        &:not(:last-child) {
+            margin-right: -1.5rem;
+        }
+    }
+}
+
+//////////////////////
+/// REVIEWS 
+.review {
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    overflow: hidden;
+
+    &__text {
+         margin-bottom: 2rem;
+         z-index: 10;
+         position: relative;
+    }
+
+    &__user {
+          display: flex;
+          align-items: center;
+          right: 59rem;
+    }
+
+    &__photo {     
+         height: 4.5rem;
+         width: 4.5rem;
+         border-radius: 50%;
+         margin-right: 1.2rem;
+    } 
+
+    &__user-box {
+        margin-left: auto;
+    }
+
+    &__user-name {
+        font-weight: 1.1rem;
+        font-weight: 600;
+        text-transform: none;
+        margin-bottom: .05rem;
+        color: black;
+    } 
+
+    &__user-date {
+        font-size: 1.3rem;
+        color: var(--color-grey-dark-3);
+        margin-bottom: 0.5rem;
+        text-transform: none;
+    }
+
+    &__rating {
+        color: black;
+        font-size: 2.2rem;
+        font-weight: 300;
+    }
+
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -2rem;
+        left: -1rem;
+        line-height: 1;
+        font-size: 20rem;
+        color: var(--color-grey-light-2);
+        font-family: sans-serif;
+        z-index: 1;
+    } 
+} 
+
+.revie {
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    overflow: hidden;
+
+    &__text {
+         margin-bottom: 2rem;
+         z-index: 10;
+         position: relative;
+    }
+
+    &__user {
+          display: flex;
+          align-items: center;
+          right: 59rem;
+    }
+
+    &__photo { 
+         align-items: center;    
+         height: 2.5rem;
+         width: 2.5rem;
+         border-radius: 50%;
+         margin-right: 1.2rem;
+         padding-bottom: 3px;
+    } 
+    
+    &__doctor-user{
+        position: relative;
+         bottom: 180px;
+         left: 7rem;
+
+    }
+
+    &__phot { 
+        height: 16.5rem;
+        width: 16.5rem;
+        border-radius: 50%;
+   } 
+
+    &__user-box {
+        margin-left: auto;
+    }
+
+    &__user-name {
+        font-weight: 1.1rem;
+        text-transform: none;
+        color: var(--color-grey-dark-3);
+        font-family: sans-serif;
+        
+    } 
+
+    &__user-date {
+        font-size: 1.5rem;
+        text-transform: none;
+        font-weight: 600;
+        color: black; 
+        font-family: sans-serif;
+    }
+
+    &__user-dat {
+        font-size: 1.9rem;
+        text-transform: none;
+        font-weight: 600;
+        color: black; 
+        font-family: sans-serif;
+        margin-left: 62px;
+    }
+
+    &__rating {
+        color: black;
+        font-size: 2.2rem;
+        font-weight: 300;
+    }
+
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -2rem;
+        left: -1rem;
+        line-height: 1;
+        font-size: 20rem;
+        color: var(--color-grey-light-2);
+        font-family: sans-serif;
+        z-index: 1;
+    } 
+
+    
+} 
+
+.chart-card {
+    background-color: #f4f0fe;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    margin-right: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 35em;
+}
+
+.rev {  
+    &__photo { 
+        position: relative;
+        left: 21rem;
+        width: 2rem;
+        top: 3.5rem;
+    } 
+}
+
+.re {  
+    &__photo { 
+        position: relative;
+        right: 9.5rem;
+        width: 2.5rem;
+        top: 7.3rem;
+    } 
+}
+
+.resp{
+    position: relative;
+     bottom: 52px;
+     right: 5rem;
+   
+     &__photo { 
+        height: 10.5rem;
+        width: 10.5rem;
+        border-radius: 50%;
+    } 
+}
+
+.temp{
+    position: relative;
+     bottom: 40px;
+     right: 5rem;
+
+   
+     &__photo { 
+        height: 6.5rem;
+        width: 6.5rem;
+        border-radius: 50%;
+    } 
+}
+
+.heart{
+    position: relative;
+     bottom: 40px;
+     right: 5rem;
+
+   
+     &__photo { 
+        height: 7.5rem;
+        width: 7.5rem;
+        border-radius: 50%;
+    } 
+}
+
+
+.r {  
+    &__photo { 
+        position: relative;
+        right: 9.5rem;
+        width: 2rem;
+        top: 7rem;
+    } 
+}
+
+.dot {  
+    &__photo { 
+        position: relative;
+        right: 7rem;
+        width: 2rem;
+        top: 1rem;
+    } 
+}
+
+.do {  
+    &__photo { 
+        position: relative;
+        right: 7.5rem;
+        width: 1.5rem;
+        top: 1rem;
+    } 
+}
+//////////////////////
+/// CALL TO ACTION
+.cta {
+    padding: 3.5rem 0;
+    text-align: center;
+
+    &__book-now {
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase; 
+        margin-bottom: 2.5rem;
+    } 
+} 
+
+//////////////////////
+/// CALL TO ACTION
+.btn {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: none;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    
+    & > * {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        transition: all .2s;
+    } 
+
+    &__visible {    
+        padding: 2rem 7.5rem;
+    }
+
+    &__invisible {
+        position: absolute;
+        padding: 2rem 0;
+        left: 0;
+        top: -100%;         
+        // color: red;     you see the "only 4 rooms left position"
+    }   
+    
+    &:hover {
+        background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+
+    }
+     
+    &:hover &__visible {
+        transform: translateY(100%);
+    } 
+
+    &:hover  &__invisible {
+       top: 0;
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+}     
+
+.middlebody {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.diagnosis-history {
+    position: relative;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 870px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 985px;
+    left: 30px ;
+
+    h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: 900;
+        color: #333;
+    }
+
+    .blood-pressure-section {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        bottom: 4rem;
+        
+        .chart {
+            flex: 2;
+            padding-right: 20px;
+
+            h2 {
+                position: relative;
+                font-size: 22px;
+                margin-bottom: 5px;
+                color: #333;
+                right: 17rem;
+            }
+
+            p {
+                position: relative;
+                font-size: 14px;
+                color: #888;
+                margin-bottom: 15px;
+                bottom: 3rem;
+                left: 15rem;
+            
+            }
+
+            #bloodPressureChart {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .blood-pressure-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .systolic,
+            .diastolic {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+
+                .legend {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+
+                .systolic .legend {
+                    background-color: #FF6BB2;
+                }
+
+                .diastolic .legend {
+                    background-color: #9F94FF;
+                }
+
+                .data {
+                    h3 {
+                        position: relative;
+                        right: 40px;
+                        margin: 0;
+                        font-size: 16px;
+                        color: #333;
+                        bottom: 1.4rem;
+                    }
+
+                    p {
+                        position: relative;
+                        right: 70px;
+                        margin: 0;
+                        font-size: 24px;
+                        font-weight: bold;
+                        color: #333;
+                        bottom: 1.4rem;
+                    }
+
+                    span {
+                        position: relative;
+                        font-size: 14px;
+                        color: #888;
+                        bottom: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .diagnosis-cards {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        top: 2rem;
+        width: 81.5rem;
+        height: 24rem;
+
+        .card {
+            background-color: #ffe6e9;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+            margin-right: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .icon {
+                margin-bottom: 10px;
+                width: 50px;
+                height: 50px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                margin: 0 auto;
+            }
+
+            &.respiratory .icon {
+                background-image: url('path_to_respiratory_icon.svg');
+            }
+
+            &.temperature .icon {
+                background-image: url('path_to_temperature_icon.svg');
+            }
+
+            &.heart-rate .icon {
+                background-image: url('path_to_heart_rate_icon.svg');
+            }
+
+            h3 {
+                position: relative;
+                font-size: 18px;
+                margin-bottom: 5px;
+                color: #333;
+                bottom: 1rem;
+                right: 5rem;
+            }
+            
+            h4 {
+                position: relative;
+                font-size: 18px;
+                margin-bottom: 5px;
+                color: #333;
+                bottom: 4rem;
+                right: 2.66rem;
+            }
+
+            h5 {
+                position: relative;
+                font-size: 18px;
+                margin-bottom: 5px;
+                color: #333;
+                top: 0.05rem;
+                right: 3.17rem;
+            }  
+
+            p3 {
+                position: relative;
+                font-size: 26px;
+                color: var( --shadow-dark );
+                font-weight: 900;
+                bottom: 2rem;
+                right: 5rem;
+            }
+
+            p2 {
+                position: relative;
+                font-size: 26px;
+                color: var( --shadow-dark );
+                font-weight: 900;
+                bottom: 5rem;
+                right: 5rem;
+            }
+
+            p {
+                position: relative;
+                font-size: 26px;
+                color: var( --shadow-dark );
+                font-weight: 900;
+                bottom: 1rem;
+                right: 5rem;
+            }
+        }
+    }
+}
